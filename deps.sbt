@@ -1,8 +1,9 @@
 // Enter your dependencies here, using SBT syntax. Maven Central is available.
 // http://search.maven.org/
 
-// Examples:
+// https://mvnrepository.com/artifact/org.apache.spark/spark-core
+libraryDependencies += "org.apache.spark" %% "spark-core" % "2.2.3"
 
-// libraryDependencies += "org.apache.commons" % "commons-math3" % "3.4.1"
+// https://mvnrepository.com/artifact/org.apache.spark/spark-sql
+libraryDependencies += "org.apache.spark" %% "spark-sql" % "2.2.3"
 
-// libraryDependencies += "org.apache.commons" % "commons-csv" % "1.1"

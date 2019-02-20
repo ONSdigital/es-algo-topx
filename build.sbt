@@ -4,14 +4,14 @@
 
 name := "TopX"
 
-organization := "algorithmia"
+organization := "ons"
 
 // Allow version to be overwritten with "-DalgoVersion=XXX"
 version := System.getProperty("algo.version", "1.0-SNAPSHOT")
 
-scalaVersion := "2.11.11"
+scalaVersion := "2.11.8"
 
-mainClass in Compile := Some("algorithmia.Main")
+mainClass in Compile := Some("uk.gov.ons.algorithmia.Main")
 
 val repoUrl = System.getProperty("repo.url", "http://git.algorithmia.com")
 
@@ -26,6 +26,11 @@ libraryDependencies ++= Seq(
 )
 
 libraryDependencies += "org.scalatest" % "scalatest_2.11" % "3.0.1" % "test"
+
+resolvers += "Spark Packages Repo" at "http://dl.bintray.com/spark-packages/maven"
+
+// Scala 2.11
+libraryDependencies += "MrPowers" % "spark-fast-tests" % "0.17.1-s_2.11"
 
 retrieveManaged := true
 
